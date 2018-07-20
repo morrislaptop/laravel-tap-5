@@ -16,6 +16,8 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
+        throw new \Exception('This is an exception');
+
         $response->assertStatus(200);
     }
 }
